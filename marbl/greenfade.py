@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from SunFounder_PiPlus import *
-import RPI.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 def marbl():
 
