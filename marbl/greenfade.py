@@ -6,16 +6,18 @@ import time
 def marbl():
 
 	global RGB, RE
+	count =0
 
 	RE = Rotary_Encoder(port='A')
 	RGB = RGB_LED(port='B')
 
 	while True:
 
-        RGB.breath(0, 255, 0)
+		RGB.breath(0, 255, 0)
 		count = RE.rotary_deal(count, step=2)
 		print(count)
 		time.sleep(.5)
+
 def destroy():
 	RGB.destroy()
 	GPIO.cleanup()
