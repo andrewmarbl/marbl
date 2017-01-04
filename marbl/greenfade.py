@@ -5,4 +5,6 @@ global RGB
 
 RGB = RGB_LED(port='B')
 
-RGB.rgb(0, 255, 0)
+while True:
+
+    RGB.rgb(0, 255, 0)
