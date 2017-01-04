@@ -2,12 +2,12 @@
 from SunFounder_PiPlus import *
 import RPi.GPIO as GPIO
 import time
-from marbl import plus_rotary_encoder
+import marbl.plus_rotary_encoder
 
 def marbl():
 
 	global RGB, RE
-	rot = plus_rotary_encoder.rot()
+	rot = marbl.plus_rotary_encoder.rot()
 
 
 	RE = Rotary_Encoder(port='A')
