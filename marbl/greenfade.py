@@ -16,7 +16,6 @@ def marbl():
 		RGB.breath(0, 255, 0)
 		count = RE.rotary_deal(count, step=1)
 		print(count)
-		time.sleep(.5)
 
 def destroy():
 	RGB.destroy()
