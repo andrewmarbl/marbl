@@ -2,11 +2,13 @@
 from SunFounder_PiPlus import *
 import RPi.GPIO as GPIO
 import time
+from marbl import plus_rotary_encoder
 
 def marbl():
 
 	global RGB, RE
-	count =0
+	rot = plus_rotary_encoder.rot()
+
 
 	RE = Rotary_Encoder(port='A')
 	RGB = RGB_LED(port='B')
@@ -14,8 +16,7 @@ def marbl():
 	while True:
 
 		RGB.breath(0, 255, 0)
-		count = RE.rotary_deal(count, step=1)
-		print(count)
+		print(rot.getdata())
 
 def destroy():
 	RGB.destroy()
