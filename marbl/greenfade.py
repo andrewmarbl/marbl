@@ -17,7 +17,6 @@ def destroy():
 	GPIO.cleanup()
 
 if __name__ == "__main__":
-	try:
-        marbl()
+	try:marbl()
 	except KeyboardInterrupt:
 		destroy()
