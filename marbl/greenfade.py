@@ -1,10 +1,23 @@
 #!/usr/bin/env python
 from SunFounder_PiPlus import *
+import RPI.GPIO as GPIO
 
-global RGB
+def marbl():
 
-RGB = RGB_LED(port='B')
+    global RGB
 
-while True:
+    RGB = RGB_LED(port='B')
 
-    RGB.rgb(0, 255, 0)
+    while True:
+
+        RGB.breath(0, 255, 0)
+
+def destroy():
+	RGB.destroy()
+	GPIO.cleanup()
+
+if __name__ == "__main__":
+	try:
+        marbl()
+	except KeyboardInterrupt:
+		destroy()
