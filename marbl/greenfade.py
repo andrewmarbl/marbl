@@ -2,7 +2,7 @@
 from SunFounder_PiPlus import *
 import RPi.GPIO as GPIO
 import time
-from marbl.plus_slide_potentiometers import sliders
+from plus_slide_potentiometers import sliders
 
 def marbl():
 
