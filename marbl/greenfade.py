@@ -2,25 +2,22 @@
 from SunFounder_PiPlus import *
 import RPi.GPIO as GPIO
 import time
-from .plus_rotary_encoder import rot
+from marbl.plus_slide_potentiometers import sliders
 
 def marbl():
 
-	global RGB, RE
-	rot = rot()
+	anything = sliders()
 
-	RE = Rotary_Encoder(port='A')
+	global RGB, RE
+
 	RGB = RGB_LED(port='B')
 
 	while True:
-
+		print(sliders.getdata())
 		RGB.breath(0, 255, 0)
-		print(rot.getdata())
 
 def destroy():
 	RGB.destroy()
-	GPIO.cleanup()
-	RE.destroy()
 	GPIO.cleanup()
 
 if __name__ == "__main__":
